@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>MOVIE PROJECT</title>
+</head>
+<body>
+    <!-- MOVIEFLIX LOGO -->
+    <div class = "logo">
+            <p class="logo-movie">Movie<span class="flix" >FLIX!</span></p>
+            <span class="fav-logo" onclick = "favMovies()">My Favourites <i class="bi bi-house-heart-fill"></i></span>
+    </div>
+    <!-- MOVIE CONTAINER -->
+    <div class="container moviflix">
+        <!-- CONTAINER FOR MOVIE SEARCH RESULT -->
+        <div class = "search-container">
+            <h3 class="container-title">LOOKING FOR MOVIES <span style="color: red;">????</span></h3>
+            <input type = "text" class = "form-control" placeholder="Search For Movie..." id = "movie-search-box" onkeyup="findMovies()" onclick = "findMovies()">
+            <div class = "search-list" id = "search-list">
+            </div>
+        </div>
+        <!-- CONTAINER FOR FAVORITES MOVIE PAGE -->
+        <div class = "container">
+            <div class = "fav-container" id="fav-page">
+                <span class="fav-close" id="fav-close" onclick = "closeFav()">x</span>
+                <div class="fav-list">
+                        <h3>My Favourites</h3>
+                        <ul id="myFavList"></ul>
+                </div>
+            </div>
+        </div>
+        <!-- CONTAINER FOR MOVIE DESCRIPTION PAGE -->
+        <div class = "container">
+            <div class = "result-container" id="movie-page">
+                <div class = "result-grid" id = "result-grid"> 
+                </div>
+            </div>
+        </div>
+    </div>  
+        
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
